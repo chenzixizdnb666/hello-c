@@ -9,4 +9,7 @@ void print_bits(uint8_t v){
     for(int i = 7; i >= 0; i--) putchar((v & (1 << i)) ? '1' : '0');
     putchar('\n');
 }
+int bit_read(uint8_t v, int n){
+  return (v >> n) & 1;
+}
 

@@ -5,7 +5,8 @@ int main(void){
     uint8_t reg = 0x00;          // 假装这是一个寄存器的值
     reg = bit_set(reg, 0);
     reg = bit_set(reg, 3);
-    print_bits(reg);             // 00001001
+    print_bits(reg);
+    printf("bit0 = %d, bit3 = %d\n", bit_read(reg, 0), bit_read(reg, 3));             // 00001001
     reg = bit_toggle(reg, 0);
     print_bits(reg);             // 00001000
     reg = bit_clear(reg, 3);
